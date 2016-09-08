@@ -7,11 +7,49 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="me.kglawrence.kerilawrence.book_park.MainActivity">
+    android:paddingBottom="16dp"
+    tools:context="me.kglawrence.kerilawrence.book_park.MainActivity"
+    android:visibility="visible">
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Teacher Bar"
+            android:layout_row = "0"
+            android:layout_columnSpan="2"
+            android:id="@+id/TeacherBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="445dp"
+            android:layout_height="match_parent"
+            android:text="CHECK IN"
+            android:id="@+id/checkInBtn"
+            android:layout_row = "1"
+            android:layout_column="0"
+            android:layout_gravity="left|top"/>
+
+        <Button
+            android:layout_width="445dp"
+            android:layout_height="match_parent"
+            android:text="CHECK OUT"
+            android:layout_row = "1"
+            android:layout_column="1"
+            android:id="@+id/checkOutBtn"
+            android:layout_gravity="right|top"/>
+
+    </GridLayout>
+
 </RelativeLayout>

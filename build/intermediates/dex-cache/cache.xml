@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_b8df2909284f65e0e13b01d4a8832629a449949e\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="29bb317e92b2e9ad593602f6290e03b2444dda10">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_f5712dac4d4a7bb672ac4e173b3847384c68e975\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_7c43b7dc72f2e70432ed1836a5945b1218ffeb00\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_8691ab34f3a1b146af240e7a875bf657a03ee33b\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_4d0bc6226fd9f262ee22a7ad721d5c22467484d6\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_25c32f6f69c669ff0fc25a7b853c6ec425e50f3f\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_2ec325fd973036bfb470fc31d5dd10001ab1598c\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_bebf63a43c2489e6057e54042c196449b8ddbd37\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_dd42406c44d351895c71585a3e040f70a48342f2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\clarkbd1.APPD\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.0_fb0bb5d12fceae0c1c346a82cb63077ee1efe33e\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="c974097fcce7fb5edc0dfacfc3ec5a25cac9c8dc">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fa2ab8258f17c04f536f17a5404c6f7cc5749e1e\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_3790032910ac2e39ae1945ac39fe3e51e3307779\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.0_09c62b93d806bf41623051fa5edb74b12d585198\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_da67a4a71170273d7461276668dacd49f8807499\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_4836c76c0b83bfa67d02f2d70772867dc95f1c9e\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.0_996574f6a330a123f8fb9ed5aad7a077c358b2f0\classes.dex" />
+    </item>
+    <item
+        jar="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="E:\School\Current Classes\CS 4800 - Capstone Project\book-park\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_5fea3438e41f60676be58c09c3a9e48ac21b2de9\classes.dex" />
+    </item>
+
+</items>
