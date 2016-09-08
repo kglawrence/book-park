@@ -10,4 +10,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    /** Called when user clicks the Check Out button */
+    public void moveToLogIn(View view) {
+        // do stuff
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+
+
+    }
 }
