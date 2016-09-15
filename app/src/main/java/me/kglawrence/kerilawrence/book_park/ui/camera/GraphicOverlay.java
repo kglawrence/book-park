@@ -49,7 +49,7 @@ public class GraphicOverlay<T extends GraphicOverlay.Graphic> extends View {
     private float mWidthScaleFactor = 1.0f;
     private int mPreviewHeight;
     private float mHeightScaleFactor = 1.0f;
-    private int mFacing = CameraSource.CAMERA_FACING_BACK;
+    private int mFacing = CameraSource.CAMERA_FACING_FRONT;
     private Set<T> mGraphics = new HashSet<>();
     private T mFirstGraphic;
 

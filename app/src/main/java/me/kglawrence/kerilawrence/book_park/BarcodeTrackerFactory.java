@@ -27,6 +27,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     private GraphicOverlay<BarcodeGraphic> mGraphicOverlay;
 
+    private OnNewBarcodeListener newBarcodeListener;
+
     BarcodeTrackerFactory(GraphicOverlay<BarcodeGraphic> barcodeGraphicOverlay) {
         mGraphicOverlay = barcodeGraphicOverlay;
     }
@@ -34,7 +36,16 @@ class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     @Override
     public Tracker<Barcode> create(Barcode barcode) {
         BarcodeGraphic graphic = new BarcodeGraphic(mGraphicOverlay);
+        newBarcodeListener.onNewItem(barcode);
         return new BarcodeGraphicTracker(mGraphicOverlay, graphic);
+    }
+
+    public interface OnNewBarcodeListener {
+        void onNewItem(Barcode item);
+    }
+
+    public void setOnNewBarcodeListener(OnNewBarcodeListener newBarcodeListener) {
+        this.newBarcodeListener = newBarcodeListener;
     }
 
 }
