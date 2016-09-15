@@ -1,7 +1,9 @@
 package me.kglawrence.kerilawrence.book_park;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     /** Called when user clicks the Check Out button */
     public void moveToLogIn(View view) {
         // do stuff
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
+        Intent login_intent = new Intent(this, LoginActivity.class);
+        startActivity(login_intent);
 
 
     }
