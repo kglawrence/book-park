@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "57465808406",
+    "firebase_url": "https://book-park.firebaseio.com",
+    "project_id": "book-park",
+    "storage_bucket": "book-park.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57465808406:android:b1695063cfadf07c",
+        "android_client_info": {
+          "package_name": "me.kglawrence.kerilawrence.book_park"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57465808406-lsu7q670labk3p8cpbu5oachhb7a1573.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJHU5dRFkZvamOF-8v_cZMPO33FVD4NAQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

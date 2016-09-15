@@ -36,4 +36,6 @@
         android:id="@+id/read_barcode"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>
