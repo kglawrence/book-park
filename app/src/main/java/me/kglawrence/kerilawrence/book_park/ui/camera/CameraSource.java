@@ -120,7 +120,7 @@ public class CameraSource {
     // Guarded by mCameraLock
     private Camera mCamera;
 
-    private int mFacing = CAMERA_FACING_BACK;
+    private int mFacing = CAMERA_FACING_FRONT;
 
     /**
      * Rotation of the device, and thus the associated preview images captured from the device.
