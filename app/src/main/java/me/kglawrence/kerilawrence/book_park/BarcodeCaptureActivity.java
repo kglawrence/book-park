@@ -45,11 +45,15 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSource;
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSourcePreview;
-
 import me.kglawrence.kerilawrence.book_park.ui.camera.GraphicOverlay;
+
+import me.kglawrence.kerilawrence.book_park.database.structure.Book;
+
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 
@@ -77,6 +81,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     // helper objects for detecting taps.
     private GestureDetector gestureDetector;
 
+    //database instance
+    private DatabaseReference mDatabase;
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -87,6 +94,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<BarcodeGraphic>) findViewById(R.id.graphicOverlay);
+        mDatabase = FirebaseDatabase.getInstance().getReference("book");
 
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
@@ -166,6 +174,8 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 if (item != null) {
                     Intent data = new Intent();
                     data.putExtra(BarcodeObject, item);
+                    String barcode = item.rawValue;
+                    mDatabase.child(barcode).child("checkedIn").setValue(false);
                     setResult(CommonStatusCodes.SUCCESS, data);
                     finish();
                 }
