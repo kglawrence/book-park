@@ -35,7 +35,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.Toast;
 
@@ -46,8 +45,6 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSource;
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSourcePreview;
 import me.kglawrence.kerilawrence.book_park.ui.camera.GraphicOverlay;
-
-import me.kglawrence.kerilawrence.book_park.database.structure.Book;
 
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;

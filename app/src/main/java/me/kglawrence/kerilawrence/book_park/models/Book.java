@@ -1,4 +1,4 @@
-package me.kglawrence.kerilawrence.book_park.database.structure;
+package me.kglawrence.kerilawrence.book_park.models;
 
 /**
  * The basic structure for book data entered into database.

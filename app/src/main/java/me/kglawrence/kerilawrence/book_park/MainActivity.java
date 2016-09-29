@@ -21,11 +21,16 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.CompoundButton;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
+
+import me.kglawrence.kerilawrence.book_park.ui.camera.ImageAdapter;
 
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
@@ -45,10 +50,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        statusMessage = (TextView)findViewById(R.id.status_message);
-        barcodeValue = (TextView)findViewById(R.id.barcode_value);
+        GridView gridview = (GridView) findViewById(R.id.gridview);
+        gridview.setAdapter(new ImageAdapter(this));
 
-        findViewById(R.id.read_barcode).setOnClickListener(this);
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, BarcodeCaptureActivity.class);
+                startActivityForResult(intent, RC_BARCODE_CAPTURE);
+            }
+        });
+
+        //statusMessage = (TextView)findViewById(R.id.status_message);
+        //barcodeValue = (TextView)findViewById(R.id.barcode_value);
+
+        //findViewById(R.id.read_barcode).setOnClickListener(this);
     }
 
     /**
@@ -58,12 +74,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.read_barcode) {
-            // launch barcode activity.
-            Intent intent = new Intent(this, BarcodeCaptureActivity.class);
-            startActivityForResult(intent, RC_BARCODE_CAPTURE);
-        }
-
+    //    if (v.getId() == R.id.read_barcode) {
+    //        // launch barcode activity.
+    //        Intent intent = new Intent(this, BarcodeCaptureActivity.class);
+    //        startActivityForResult(intent, RC_BARCODE_CAPTURE);
+    //    }
     }
 
     /**
