@@ -22,15 +22,19 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.CompoundButton;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-import me.kglawrence.kerilawrence.book_park.ui.camera.ImageAdapter;
+import me.kglawrence.kerilawrence.book_park.models.Student;
 
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
@@ -38,9 +42,9 @@ import me.kglawrence.kerilawrence.book_park.ui.camera.ImageAdapter;
  */
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    // use a compound button so either checkbox or switch widgets work.
-    private TextView statusMessage;
-    private TextView barcodeValue;
+    private DatabaseReference mDatabase;
+    private int[] studentImages;
+    private boolean checkIn;
 
     private static final int RC_BARCODE_CAPTURE = 9001;
     private static final String TAG = "BarcodeMain";
@@ -50,6 +54,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            checkIn = (boolean) bundle.get("checkin");
+            Log.d("tag", "" + checkIn);
+        }
+
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this));
 
@@ -57,6 +68,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, BarcodeCaptureActivity.class);
+                String studentId = Integer.toString(position);
+                intent.putExtra("studentId", studentId);
+                intent.putExtra("checkin", checkIn);
                 startActivityForResult(intent, RC_BARCODE_CAPTURE);
             }
         });
@@ -109,17 +123,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
-                    statusMessage.setText(R.string.barcode_success);
-                    barcodeValue.setText(barcode.displayValue);
+                    //statusMessage.setText(R.string.barcode_success);
+                    //barcodeValue.setText(barcode.displayValue);
                     Log.d(TAG, "Barcode read: " + barcode.displayValue);
                 } else {
-                    statusMessage.setText(R.string.barcode_failure);
+                    //statusMessage.setText(R.string.barcode_failure);
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
-            } else {
-                statusMessage.setText(String.format(getString(R.string.barcode_error),
-                        CommonStatusCodes.getStatusCodeString(resultCode)));
-            }
+            } //else {
+                //statusMessage.setText(String.format(getString(R.string.barcode_error),
+                 //       CommonStatusCodes.getStatusCodeString(resultCode)));
+            //}
         }
         else {
             super.onActivityResult(requestCode, resultCode, data);

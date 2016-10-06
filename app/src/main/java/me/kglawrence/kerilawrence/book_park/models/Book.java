@@ -8,17 +8,15 @@ public class Book {
 
     public String title;
     public String author;
-    public boolean checkedIn;
     public String barcode;
 
     public Book() {
 
     }
 
-    public Book(String title, String author, boolean checkedIn, String barcode) {
+    public Book(String title, String author,  String barcode) {
         this.title = title;
         this.author = author;
-        this.checkedIn = checkedIn;
         this.barcode = barcode;
     }
 }

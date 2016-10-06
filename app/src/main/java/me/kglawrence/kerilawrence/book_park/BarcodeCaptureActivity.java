@@ -45,6 +45,7 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSource;
 import me.kglawrence.kerilawrence.book_park.ui.camera.CameraSourcePreview;
 import me.kglawrence.kerilawrence.book_park.ui.camera.GraphicOverlay;
+import me.kglawrence.kerilawrence.book_park.models.Student;
 
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -81,6 +82,9 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     //database instance
     private DatabaseReference mDatabase;
 
+    private String studentId;
+    private boolean checkIn;
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -91,7 +95,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<BarcodeGraphic>) findViewById(R.id.graphicOverlay);
-        mDatabase = FirebaseDatabase.getInstance().getReference("book");
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // Check for the camera permission before accessing the camera.  If the
         // permission is not granted yet, request permission.
@@ -100,6 +104,15 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
             createCameraSource(autoFocus);
         } else {
             requestCameraPermission();
+        }
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            studentId = (String) bundle.get("studentId");
+            checkIn = (boolean) bundle.get("checkin");
+            Log.d("tag", "" + studentId);
+            Log.d("tag", "" + checkIn);
         }
 
         Snackbar.make(mGraphicOverlay, "Hold book up to camera",
@@ -172,7 +185,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                     Intent data = new Intent();
                     data.putExtra(BarcodeObject, item);
                     String barcode = item.rawValue;
-                    mDatabase.child(barcode).child("checkedIn").setValue(false);
+                    mDatabase.child("checkedout").child(barcode).child("studentId").setValue(studentId);
                     setResult(CommonStatusCodes.SUCCESS, data);
                     finish();
                 }
