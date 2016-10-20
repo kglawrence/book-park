@@ -16,6 +16,7 @@
 
 package me.kglawrence.kerilawrence.book_park;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -24,6 +25,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -119,15 +121,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RC_BARCODE_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
+                Context context = getApplicationContext();
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast;
                 if (data != null) {
                     Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
+                    CharSequence text = "Successfully scanned book!!";
+                    toast = Toast.makeText(context, text, duration);
+
                     //statusMessage.setText(R.string.barcode_success);
                     //barcodeValue.setText(barcode.displayValue);
                     Log.d(TAG, "Barcode read: " + barcode.displayValue);
                 } else {
+                    CharSequence text = "Failed to scan barcode.";
+                    toast = Toast.makeText(context, text, duration);
                     //statusMessage.setText(R.string.barcode_failure);
                     Log.d(TAG, "No barcode captured, intent data is null");
                 }
+                toast.show();
             } //else {
                 //statusMessage.setText(String.format(getString(R.string.barcode_error),
                  //       CommonStatusCodes.getStatusCodeString(resultCode)));
