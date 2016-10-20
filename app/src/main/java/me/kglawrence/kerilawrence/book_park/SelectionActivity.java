@@ -11,8 +11,8 @@ public class SelectionActivity extends AppCompatActivity implements View.OnClick
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selection_activity);
-        Button dropOffButton = (Button)findViewById(R.id.selection_check_out);
-        Button pickUpButton = (Button)findViewById(R.id.selection_check_in);
+        Button pickUpButton = (Button)findViewById(R.id.selection_check_out);
+        Button dropOffButton = (Button)findViewById(R.id.selection_check_in);
         pickUpButton.setOnClickListener(this);
         dropOffButton.setOnClickListener(this);
     }

@@ -42,8 +42,6 @@ import me.kglawrence.kerilawrence.book_park.models.Student;
  */
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private DatabaseReference mDatabase;
-    private int[] studentImages;
     private boolean checkIn;
 
     private static final int RC_BARCODE_CAPTURE = 9001;

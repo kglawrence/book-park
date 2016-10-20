@@ -76,9 +76,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
     private CameraSourcePreview mPreview;
     private GraphicOverlay<BarcodeGraphic> mGraphicOverlay;
 
-    // helper objects for detecting taps.
-    private GestureDetector gestureDetector;
-
     //database instance
     private DatabaseReference mDatabase;
 
@@ -152,12 +149,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                 .show();
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent e) {
-        boolean c = gestureDetector.onTouchEvent(e);
-
-        return c || super.onTouchEvent(e);
-    }
 
     /**
      * Creates and starts the camera.  Note that this uses a higher resolution in comparison
@@ -185,7 +176,12 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
                     Intent data = new Intent();
                     data.putExtra(BarcodeObject, item);
                     String barcode = item.rawValue;
-                    mDatabase.child("checkedout").child(barcode).child("studentId").setValue(studentId);
+                    if (checkIn) {
+                        mDatabase.child("checkedout").child(barcode).child("studentId").setValue(studentId);
+                    }
+                    else {
+                        mDatabase.child("checkedout").child(barcode).removeValue();
+                    }
                     setResult(CommonStatusCodes.SUCCESS, data);
                     finish();
                 }
@@ -229,9 +225,8 @@ public final class BarcodeCaptureActivity extends AppCompatActivity {
         // make sure that auto focus is an available option
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             builder = builder.setFocusMode(
-                    autoFocus ? Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE : null);
+                    autoFocus ? Camera.Parameters.FOCUS_MODE_AUTO : null);
         }
-
         mCameraSource = builder.build();
     }
 
